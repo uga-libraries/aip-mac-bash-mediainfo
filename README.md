@@ -1,0 +1,1 @@
+# aip-mac-bash-mediainfo
