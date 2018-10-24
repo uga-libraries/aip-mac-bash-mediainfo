@@ -45,8 +45,8 @@ If you do not put both of the required filepaths from above, an error message wi
 # Installation:
 
    1.  Install the dependencies (listed above).
-   2.  Download the "aip-workflowdocs" folder with the scripts, stylesheets, and other files needed for the workflow from GitHub and save to your computer.
-   3.  Update the filepath variables in the aip-creation.sh script (lines 31-32) to the location of the aip-workflowdocs folder and Saxon program on your computer.
+   2.  Download the "workflowdocs" folder with the scripts, stylesheets, and other files needed for the workflow from GitHub and save to your computer.
+   3.  Update the filepath variables in the aip-creation.sh script (lines 31-32) to the location of the workflowdocs folder and Saxon program on your computer.
    4.  Update the base-uri in the stylesheets and DTD to the base for your identifiers:
          1. mediainfo-to-master.xsl: in variable name="uri" (line 42)
          2. premis.xsd: in the restriction pattern for objectIdentifierType (line 35)
