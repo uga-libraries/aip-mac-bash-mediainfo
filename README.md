@@ -30,14 +30,14 @@ This script can be used on both bagged and non-bagged folders. If a bag, the scr
 The script executes many of the commands based on the assumption that folders follow the naming convention for our library unit (i.e. starting with the letter combitionation 'rbrl'.) The more you can standardize your filenames and foldernames before running the script, the fewer errors you are likely to encounter when running this on batches of folders. 
 
 To run the script:
-In the command line, put the absolute filepath of the aip-creation.sh script. Then put the absolute filepath of your source directory (i.e. directory containing AIP folders). 
+   In the command line, put the absolute filepath of the aip-creation.sh script. Then put the absolute filepath of your source directory (i.e. directory containing AIP folders). 
 
 If you do not put both of the required filepaths from above, an error message will prompt you do so. The script will not run unless it has both arguments. 
 
 # Dependencies:
 
    -   bagit.py (https://github.com/LibraryOfCongress/bagit-python)
-   -   MediaInfo (https://mediaarea.net/en/MediaInfo/Download)
+   -   MediaInfo CLI (https://mediaarea.net/en/MediaInfo/Download)
    -   md5deep (https://github.com/jessek/hashdeep/releases)
    -   saxon9he xslt processor (http://saxon.sourceforge.net/)
    -   xmlint (command line utility that should come installed on a Mac/Linux machine)
