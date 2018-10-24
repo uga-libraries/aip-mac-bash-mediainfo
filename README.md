@@ -30,7 +30,7 @@ This script can be used on both bagged and non-bagged folders. If a bag, the scr
 The script executes many of the commands based on the assumption that folders follow the naming convention for our library unit (i.e. starting with the letter combitionation 'rbrl'.) The more you can standardize your filenames and foldernames before running the script, the fewer errors you are likely to encounter when running this on batches of folders. 
 
 To run the script:
-   In the command line, put the absolute filepath of the aip-creation.sh script. Then put the absolute filepath of your source directory (i.e. directory containing AIP folders). 
+   -  In the command line, put the absolute filepath of the aip-creation.sh script. Then put the absolute filepath of your source directory (i.e. directory containing AIP folders). 
 
 If you do not put both of the required filepaths from above, an error message will prompt you do so. The script will not run unless it has both arguments. 
 
@@ -48,8 +48,8 @@ If you do not put both of the required filepaths from above, an error message wi
    2.  Download the "aip-workflowdocs" folder with the scripts, stylesheets, and other files needed for the workflow from GitHub and save to your computer.
    3.  Update the filepath variables in the aip-creation.sh script (lines 31-32) to the location of the aip-workflowdocs folder and Saxon program on your computer.
    4.  Update the base-uri in the stylesheets and DTD to the base for your identifiers:
-            i.  mediainfo-to-master.xsl: in variable name="uri" (line 42)
-            ii. premis.xsd: in the restriction pattern for objectIdentifierType (line 35)
+            - i.  mediainfo-to-master.xsl: in variable name="uri" (line 42)
+            - ii. premis.xsd: in the restriction pattern for objectIdentifierType (line 35)
    5.  Change permission on the script so that it is executable.
 
 # Acknowledgements:
