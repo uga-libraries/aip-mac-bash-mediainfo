@@ -100,7 +100,7 @@
 	
 	<xsl:choose>
 		
-<!-- 1. Tests whether 'FileName' tag contains '_pm' ; if it does, it runs a different regex that eliminates the '_pm' from the output-->
+<!-- 1. Tests whether 'FileName' tag contains the string '_pm' ; if it does, it runs a different regex that eliminates the '_pm' from the output-->
     <xsl:when test="$aip-filepath[contains(FileName, '_pm')]">
         <xsl:analyze-string select="$aip-filepath/FileName[1]" regex="(rbrl\d{{2,5}}\w.*)_pm">
             <xsl:matching-substring>
@@ -120,7 +120,7 @@
     </xsl:when>
 		
 <!-- 3. Tests for when an aip contains multiple files, the regex below pulls information from the FolderName rather than FileName tag
-<!-- Meant is meant to screen out names of individual files, since they do no accurately represent the title of the whole aip-->
+<!-- Meant to screen out names of individual files, since they do no accurately represent the title of the whole aip-->
     <xsl:when test="$file-nodes > 1">
         <xsl:analyze-string select="$aip-filepath/FolderName" regex="(rbrl\d{{3}}\w{{2,5}}-\w.*)/objects">
             <xsl:matching-substring>
