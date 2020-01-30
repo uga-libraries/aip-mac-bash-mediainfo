@@ -1,5 +1,8 @@
 # Make an AIP on Mac/Linux with Bash Script and MediaInfo
 
+# Replaced by Python scripts on 1/30/2020
+# https://github.com/uga-libraries/av-aip_russell
+
 # Purpose:
 
 Transform a batch of folders into Archival Information Packages (AIPS), including generating PREMIS metadata, using two bash scripts, free tools, and xslt stylesheets on a Mac or Linux operating system.
