@@ -95,7 +95,7 @@
 <!--since fields in the aip-level section do not repeat, named templates were chosen as the most appropriate option for processing this information-->
 	
 	
-<!--the aip-title template below contains three conditional 'when' tests and a default condition-->
+<!--the aip-title template below contains four conditional 'when' tests and a default condition-->
 	<xsl:template name="aip-title">
 	
 	<xsl:choose>
@@ -128,6 +128,11 @@
             </xsl:matching-substring>
         </xsl:analyze-string>
     </xsl:when>
+		
+<!-- 4. Tests for when an aip contains file with extension 'mov'-->
+    <xsl:when test="//track[contains(FileExtension, 'mov')]">
+        <xsl:value-of select="$aip-filepath/FileName"/><xsl:text>_media</xsl:text>
+    </xsl:when>	
 		
 	
 <!--Default condition with the broadest regex (only for media aips)-->
