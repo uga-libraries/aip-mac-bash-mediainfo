@@ -127,7 +127,7 @@ echo "restructuring aip directories"
 
 # GLOBIGNORE variable lists all the file extensions that will be ignored in script until the variable is unset
 
-    GLOBIGNORE=*.mov:*pm.wav:*pm.mp3*:*.dv:*avchd:*transcript.pdf:*ohms.xml:*dg.pdf:*notes.pdf:*transcript.doc:*transcript.docx
+    GLOBIGNORE=*.mov:*.wav:*mp3*:*.dv:*avchd:*transcript.pdf:*ohms.xml:*dg.pdf:*notes.pdf:*transcript.doc:*transcript.docx
 
 # since globignore variable is active, deletes all files from 'objects' folder EXCEPT the specified preservation files
 	for d in rbrl*; do
