@@ -7,8 +7,8 @@
 # Filepath variables: give the absolute filepath for MediaInfo, Saxon, and workflowdocs folder (where scripts, stylesheets, DTDs, etc. are saved)
 # Update these here and they will be updated wherever they appear in the rest of the script
 
-    saxon='/home/digipres/aip-apps/saxon'
-    workflowdocs='/home/digipres/aip-russell-ohm/workflowdocs'
+    saxon='insert-filepath'
+    workflowdocs='insert-filepath'
 
 # Checks that got the required input (path of source directory)
     if [ -z "$1" ];
