@@ -211,9 +211,18 @@
                 <premis:formatDesignation>
                     <premis:formatName><xsl:value-of select="$aip-filepath/Format"/></premis:formatName>
                 </premis:formatDesignation>
-                <premis:formatNote>
-                    <xsl:text>Format identified by MediaInfo version </xsl:text><xsl:value-of select="$mediainfo-version"/><xsl:text>.</xsl:text>
-                </premis:formatNote>
+                    <premis:formatNote>
+			<xsl:variable name="track2" select="//Mediainfo/File[1]/track[@type='Video'][1]"/> 
+			<xsl:choose>
+			<xsl:when test="$aip-filepath[contains(FileExtension, 'mov')]">
+				<xsl:text>Format identified by MediaInfo version </xsl:text><xsl:value-of select="$mediainfo-version"/><xsl:text>. File encoded as: </xsl:text>
+					<xsl:value-of select="$track2/Encoded_Library, $track2/Format_Commercial, $track2/Format_Profile" separator=" "/><xsl:text>.</xsl:text>
+            		</xsl:when>
+			<xsl:otherwise>
+                        	<xsl:text>Format identified by MediaInfo version </xsl:text><xsl:value-of select="$mediainfo-version"/><xsl:text>.</xsl:text>
+			</xsl:otherwise>
+			</xsl:choose>
+                    </premis:formatNote>
             </premis:format>
         </xsl:if>
 	
@@ -237,7 +246,16 @@
                     </premis:formatName>
                     </premis:formatDesignation>
                     <premis:formatNote>
-                        <xsl:text>Format identified by MediaInfo version </xsl:text><xsl:value-of select="$mediainfo-version"/><xsl:text>.</xsl:text>
+			<xsl:variable name="track2" select="//Mediainfo/File[1]/track[@type='Video'][1]"/> 
+			<xsl:choose>
+			<xsl:when test="$aip-filepath[contains(FileExtension, 'mov')]">
+				<xsl:text>Format identified by MediaInfo version </xsl:text><xsl:value-of select="$mediainfo-version"/><xsl:text>. File encoded as: </xsl:text>
+					<xsl:value-of select="$track2/Encoded_Library, $track2/Format_Commercial, $track2/Format_Profile" separator=" "/><xsl:text>.</xsl:text>
+            		</xsl:when>
+			<xsl:otherwise>
+                        	<xsl:text>Format identified by MediaInfo version </xsl:text><xsl:value-of select="$mediainfo-version"/><xsl:text>.</xsl:text>
+			</xsl:otherwise>
+			</xsl:choose>
                     </premis:formatNote>
                 </premis:format>
             </xsl:for-each-group>
