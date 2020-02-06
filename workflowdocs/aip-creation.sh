@@ -161,7 +161,7 @@ echo "restructuring aip directories"
         if grep -qE '(transcript|ohms|dg)' $i ; then
             mv $i ${i%mediainfo.xml}metadata_mediainfo.xml
 
-        elif grep -qE '(mov|pm.wav|dv|pm.mp3)' $i ; then
+        elif grep -qE '(mov|wav|dv|mp3)' $i ; then
             mv $i ${i%mediainfo.xml}media_mediainfo.xml
 
         else echo "MediaInfo XML was not generated for $i"
