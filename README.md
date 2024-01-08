@@ -1,13 +1,13 @@
 # Make an AIP on Mac/Linux with Bash Script and MediaInfo
 
-# Replaced by Python scripts on 1/30/2020
-# https://github.com/uga-libraries/av-aip_russell
+## Repo Archived 
+Replaced by Python scripts on 1/30/2020: [https://github.com/uga-libraries/av-aip_russell](https://github.com/uga-libraries/av-aip_russell)
 
-# Purpose:
+## Purpose:
 
 Transform a batch of folders into Archival Information Packages (AIPS), including generating PREMIS metadata, using two bash scripts, free tools, and xslt stylesheets on a Mac or Linux operating system.
 
-# Description:
+## Description:
 
 This script performs the following tasks:
 
@@ -24,7 +24,7 @@ This script performs the following tasks:
 
 A diagram of the AIP workflow is included in PDF form in the documentation folder. 
 
-# Usage:
+## Usage:
 
 The contents of each aip should be in an individual folder, named with the convention aip-id_some-title. 
 
@@ -37,7 +37,7 @@ To run the script:
 
 If you do not put both of the required filepaths from above, an error message will prompt you do so. The script will not run unless it has both arguments. 
 
-# Dependencies:
+## Dependencies:
 
    -   bagit.py (https://github.com/LibraryOfCongress/bagit-python)
    -   MediaInfo CLI (https://mediaarea.net/en/MediaInfo/Download)
@@ -45,7 +45,7 @@ If you do not put both of the required filepaths from above, an error message wi
    -   saxon9he xslt processor (http://saxon.sourceforge.net/)
    -   xmlint (command line utility that should come installed on a Mac/Linux machine)
 
-# Installation:
+## Installation:
 
    1.  Install the dependencies (listed above).
    2.  Download the "workflowdocs" folder with the scripts, stylesheets, and other files needed for the workflow from GitHub and save to your computer.
@@ -55,7 +55,7 @@ If you do not put both of the required filepaths from above, an error message wi
          2. premis.xsd: in the restriction pattern for objectIdentifierType (line 35)
    5.  Change permission on the script so that it is executable.
 
-# Acknowledgements:
+## Acknowledgements:
 
 This workflow was modeled off the aip-mac-bash-fits workflow developed by Adriane Hanson, Head of Digital Stewardship at University of Georgia Libraries. 
 
